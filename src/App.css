@@ -1,0 +1,30 @@
+/* Nav Bar */
+.navbar {
+  background-color: #c4c4c4;
+  box-shadow: 0px 1px 5px rgb(133, 133, 133);
+  min-width: 100vw;
+}
+
+.navbar-items {
+  font-size: 20px;
+  display: flex;
+  min-width: 100vw;
+  justify-content: flex-start;
+  list-style-type: none;
+  margin: 0;
+  padding: 1%;
+}
+
+.navbar-item {
+  font-weight: bold;
+  padding-right: 2.5%;
+  padding-left: 2.5%;
+  color: #303030 !important;
+}
+.navbar-item-link {
+  color: #303030;
+  text-decoration: none;
+}
+.navbar-item-link:hover {
+  color: #303030;
+}

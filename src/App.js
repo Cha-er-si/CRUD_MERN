@@ -1,28 +1,31 @@
 import React from 'react';
-import { Router, Switch } from 'react-router';
-import logo from './logo.svg';
-import '/App.css';
-import { todoList } from './components/todoList.js';
-import { editTodo } from './components/editTodo.js';
-import { createTodo } from './components/createTodo.js';
+import { Switch, Route, Link } from 'react-router-dom';
+import './App.css';
+import todoList from './components/todoList.js';
+import editTodo from './components/editTodo.js';
+import createTodo from './components/createTodo.js';
 
 function App() {
   return (
     <div>
       <nav className='navbar'>
         <ul className='navbar-items'>
-          <li>
-            <Link to='/'>Todos</Link>
+          <li className='navbar-item'>
+            <Link className='navbar-item-link' to='/'>
+              TODOS
+            </Link>
           </li>
-          <li>
-            <Link to='/create'>Create Todo</Link>
+          <li className='navbar-item'>
+            <Link className='navbar-item-link' to='/create'>
+              CREATE TODO
+            </Link>
           </li>
         </ul>
       </nav>
       <Switch>
-        <Router exact path='/' component={todoList} />
-        <Router path='/edit/:id' component={editTodo} />
-        <Router path='/create' component={createTodo} />
+        <Route exact path='/' component={todoList} />
+        <Route path='/edit/:id' component={editTodo} />
+        <Route path='/create' component={createTodo} />
       </Switch>
     </div>
   );
