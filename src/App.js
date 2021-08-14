@@ -1,9 +1,9 @@
 import React from 'react';
 import { Switch, Route, Link } from 'react-router-dom';
 import './App.css';
-import TodoList from './components/todoList.js';
-import editTodo from './components/editTodo.js';
-import CreateTodo from './components/createTodo.js';
+import TodoList from './components/TodoList.js';
+import EditTodo from './components/EditTodo.js';
+import CreateTodo from './components/CreateTodo.js';
 
 function App() {
   return (
@@ -24,7 +24,7 @@ function App() {
       </nav>
       <Switch>
         <Route exact path='/' component={TodoList} />
-        <Route path='/edit/:id' component={editTodo} />
+        <Route path='/edit/:id' component={EditTodo} />
         <Route path='/create' component={CreateTodo} />
       </Switch>
     </div>
