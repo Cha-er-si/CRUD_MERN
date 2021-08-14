@@ -21,10 +21,12 @@
   padding-left: 2.5%;
   color: #303030 !important;
 }
+
 .navbar-item-link {
   color: #303030;
   text-decoration: none;
 }
+
 .navbar-item-link:hover {
-  color: #303030;
+  color: #1f1f1f;
 }
