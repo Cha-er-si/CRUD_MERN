@@ -1,6 +1,5 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import { useHistory } from 'react-router-dom';
 
 const TodoForm = ({ todo, onSubmit }) => {
   const { register, handleSubmit } = useForm({

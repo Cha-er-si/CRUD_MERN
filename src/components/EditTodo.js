@@ -1,17 +1,24 @@
 import React, { useState, useEffect } from 'react';
-import TodoForm from './TodoForm.js';
+import TodoForm from './TodoForm';
+import { useRouteMatch, useHistory } from 'react-router-dom';
+import { getTodo, updateTodo } from '../api.js';
 
 const EditTodo = () => {
+  const match = useRouteMatch();
   const [todo, setTodo] = useState();
+  const history = useHistory();
 
   useEffect(() => {
-    setTodo({
-      text: 'foo',
-    });
-  }, []);
+    const fetchTodo = async () => {
+      const todo = await getTodo(match.params.id);
+      setTodo(todo);
+    };
+    fetchTodo();
+  }, [match.params.id]);
 
-  const onSubmit = (data) => {
-    alert(JSON.stringtify(data));
+  const onSubmit = async (data) => {
+    await updateTodo(data, match.params.id);
+    history.push('/');
   };
 
   return todo ? (
