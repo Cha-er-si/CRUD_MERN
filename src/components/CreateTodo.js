@@ -1,9 +1,14 @@
 import React from 'react';
 import TodoForm from './TodoForm.js';
+import { createTodos } from '../api.js';
+import { useHistory } from 'react-router-dom';
 
 const CreateTodo = () => {
-  const onSubmit = (data) => {
-    alert(JSON.stringify(data));
+  const history = useHistory();
+
+  const onSubmit = async (data) => {
+    await createTodos(data);
+    history.push('/');
   };
 
   return (
