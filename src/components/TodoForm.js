@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { useForm } from 'react-hook-form';
 import { useHistory } from 'react-router-dom';
 
@@ -27,7 +27,7 @@ const TodoForm = ({ todo, onSubmit }) => {
       </div>
       <div className='form-group'>
         <button type='submit' className='btn btn-primary'>
-          Submit Todo
+          Save
         </button>
       </div>
     </form>
