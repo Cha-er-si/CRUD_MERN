@@ -27,7 +27,7 @@ const TodoForm = ({ todo, onSubmit }) => {
       </div>
       <div className='form-group'>
         <button type='submit' className='btn btn-primary'>
-          Submit
+          Submit Todo
         </button>
       </div>
     </form>
