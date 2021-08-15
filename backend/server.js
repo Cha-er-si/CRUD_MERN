@@ -5,7 +5,7 @@ const Todo = require('./models/Todo');
 
 mongoose.connect(
   'mongodb+srv://chaersi:12345@crudmern.fyx6x.mongodb.net/toDo?retryWrites=true&w=majority',
-  { useNewUrlParser: true }
+  { useNewUrlParser: true, useUnifiedTopology: true }
 );
 mongoose.connection.once('open', () => {
   console.log('Mongodb connected succesfully...');
