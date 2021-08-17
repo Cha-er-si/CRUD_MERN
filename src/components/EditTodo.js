@@ -24,7 +24,7 @@ const EditTodo = () => {
   return todo ? (
     <div className='container'>
       <div className='mt-3'>
-        <h1>Edit Todo Item</h1>
+        <h1 className='todo-title'>EDIT TODO ITEM</h1>
         <TodoForm todo={todo} onSubmit={onSubmit} />
       </div>
     </div>

@@ -14,7 +14,7 @@ const CreateTodo = () => {
   return (
     <div className='container'>
       <div className='mt-3'>
-        <h1>Create Todo Item</h1>
+        <h1 className='todo-title'>CREATE TODO ITEM</h1>
         <TodoForm onSubmit={onSubmit} />
       </div>
     </div>

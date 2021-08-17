@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { getTodos } from '../api.js';
+import { MdModeEdit } from 'react-icons/md';
 
 const TodoList = () => {
   const [items, setItems] = useState([]);
@@ -16,22 +17,24 @@ const TodoList = () => {
   return (
     <div className='container'>
       <div className='mt-3'>
-        <h1>Todo List</h1>
-        <table className='table table-stripped mt-3'>
-          <thead>
+        <h1 className='todo-title'>TODO LIST</h1>
+        <table className='todo-table'>
+          <thead className='todo-header'>
             <tr>
-              <th>Text</th>
-              <th>Description</th>
-              <th>Action</th>
+              <th className='todo-text'>Text</th>
+              <th className='todo-description'>Description</th>
+              <th className='todo-action'>Action</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody className='todo-body'>
             {items.map((todo) => (
               <tr key={todo._id}>
                 <td>{todo.text}</td>
                 <td>{todo.description}</td>
-                <td>
-                  <Link to={`/edit/${todo._id}`}>Edit</Link>
+                <td className='todo-action'>
+                  <Link to={`/edit/${todo._id}`}>
+                    <MdModeEdit />
+                  </Link>
                 </td>
               </tr>
             ))}

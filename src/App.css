@@ -1,8 +1,16 @@
+/* Root */
+* {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
 /* Nav Bar */
 .navbar {
-  background-color: #c4c4c4;
+  background-color: #d34f4f;
   box-shadow: 0px 1px 5px rgb(133, 133, 133);
-  min-width: 100vw;
+  min-width: 100%;
+  height: 10vh;
+  padding-left: 3.5%;
 }
 
 .navbar-items {
@@ -12,21 +20,111 @@
   justify-content: flex-start;
   list-style-type: none;
   margin: 0;
-  padding: 1%;
 }
 
 .navbar-item {
   font-weight: bold;
   padding-right: 2.5%;
   padding-left: 2.5%;
-  color: #303030 !important;
-}
-
-.navbar-item-link {
   color: #303030;
+}
+.navbar-item-link {
+  color: #ffffff;
   text-decoration: none;
 }
 
 .navbar-item-link:hover {
+  color: #c9c9c9;
+}
+
+/* Todo List */
+.container {
+  padding-top: 1%;
+}
+.todo-table {
+  min-width: 100%;
+  min-height: 100%;
+  padding: 100px;
+}
+.todo-title {
   color: #1f1f1f;
+  font-weight: bold;
+  padding-bottom: 1%;
+}
+.todo-header {
+  font-weight: bold;
+  font-size: 100%;
+  background-color: #db9393;
+  color: #ffffff;
+  height: 6vh;
+  padding: 100px;
+}
+.todo-header tr {
+  border-bottom: solid rgb(161, 161, 161);
+}
+.todo-body {
+  height: 20vh;
+}
+.todo-body tr {
+  border-bottom: solid rgb(161, 161, 161);
+}
+.todo-body tr td {
+  padding: 1%;
+}
+.todo-text {
+  width: 20%;
+  text-align: center;
+}
+.todo-description {
+  width: 50%;
+  text-align: center;
+}
+.todo-action {
+  width: 10%;
+  text-align: center;
+}
+
+/* Todo Forms */
+.form-group {
+  width: 100%;
+}
+.form-text {
+  display: flex;
+  justify-content: space-around;
+}
+.form-text label {
+  font-weight: bold;
+  font-size: 17px;
+  color: black;
+  width: 10%;
+}
+.form-text input {
+  width: 90%;
+  border-color: #db9393;
+}
+.form-description {
+  display: flex;
+  justify-content: space-around;
+}
+.form-description label {
+  font-weight: bold;
+  font-size: 17px;
+  color: black;
+  min-width: 10%;
+}
+.form-description input {
+  min-width: 90%;
+  border-color: #db9393;
+}
+.form-button {
+  height: 6vh;
+  width: 9%;
+  font-weight: bold;
+  background-color: #a13b3b;
+  color: white;
+  border-radius: 15%;
+  border: 0;
+}
+.form-button:hover {
+  background-color: #db9393;
 }

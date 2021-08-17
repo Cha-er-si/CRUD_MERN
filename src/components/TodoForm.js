@@ -16,27 +16,33 @@ const TodoForm = ({ todo, onSubmit }) => {
   return (
     <form onSubmit={submitHandler}>
       <div className='form-group'>
-        <label htmlFor='text'>Text:</label>
-        <input
-          {...register('text', { required: true })}
-          className='form-control'
-          type='text'
-          name='text'
-          id='text'
-        />
-        <label htmlFor='description'>Description:</label>
-        <input
-          {...register('description', { required: true })}
-          className='form-control'
-          type='description'
-          name='description'
-          id='description'
-        />
-      </div>
-      <div className='form-group'>
-        <button type='submit' className='btn btn-primary'>
-          Save
-        </button>
+        <div className='form-text'>
+          <label htmlFor='text'>Text:</label>
+          <input
+            {...register('text', { required: true })}
+            className='form-control'
+            type='text'
+            name='text'
+            id='text'
+          />
+        </div>
+        <br />
+        <div className='form-description'>
+          <label htmlFor='description'>Description:</label>
+          <input
+            {...register('description', { required: true })}
+            className='form-control'
+            type='description'
+            name='description'
+            id='description'
+          />
+        </div>
+        <br />
+        <div className='form-button-container'>
+          <button type='submit' className='form-button'>
+            Save
+          </button>
+        </div>
       </div>
     </form>
   );
