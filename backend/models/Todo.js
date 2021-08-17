@@ -1,12 +1,12 @@
 const mongoose = require('mongoose');
 
-const Todo = mongoose.Schema({
+const todoSchema = mongoose.Schema({
   text: {
     type: String,
   },
-  desription: {
+  description: {
     type: String,
   },
 });
 
-module.exports = mongoose.model('Todo', Todo);
+module.exports = Todo = mongoose.model('Todo', todoSchema);

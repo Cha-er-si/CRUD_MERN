@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const Todo = require('./models/Todo');
 
 mongoose.connect(
-  'mongodb+srv://chaersi:12345@crudmern.fyx6x.mongodb.net/toDo?retryWrites=true&w=majority',
+  'mongodb+srv://chaersi:12345@crudmern.fyx6x.mongodb.net/toDO?retryWrites=true&w=majority',
   { useNewUrlParser: true, useUnifiedTopology: true }
 );
 mongoose.connection.once('open', () => {
@@ -54,6 +54,7 @@ app.post('/:id', (req, res) => {
       res.status(404).send('Todo not found');
     } else {
       todo.text = req.body.text;
+      todo.description = req.body.description;
 
       todo
         .save()
